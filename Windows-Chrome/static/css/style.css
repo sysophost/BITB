@@ -1,0 +1,154 @@
+@font-face {
+  font-family: system;
+  font-style: normal;
+  font-weight: 300;
+  src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"),
+    local("Roboto-Light"), local("DroidSans"), local("Tahoma"),
+    local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light");
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+@media (prefers-color-scheme: light) {
+  #title-bar {
+    background-color: #d6dae0;
+  }
+  #url-bar {
+    background-color: #f1f3f4;
+    border-bottom: 1px solid lightgray;
+  }
+  #logo-description {
+    color: black;
+  }
+  #domain-name {
+    color: black;
+  }
+  #domain-path {
+    color: grey
+  }
+  #minimize, #square {
+    color: black;
+  }
+  #minimize:hover, #square:hover {
+    background-color: rgba(0, 0, 0, 0.09765625);
+  }
+  #exit {
+    color: black;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  #title-bar {
+    background-color: black;
+    color: white;
+  }
+  #url-bar {
+    background-color: #1b1a1a;
+  }
+  #logo-description {
+    color: white;
+  }
+  #domain-name {
+    color: white;
+  }
+  #domain-path {
+    color: grey;
+  }
+  #minimize:hover, #square:hover {
+    background-color: #272727;
+  }
+}
+
+#logo {
+  padding-left: 5px;
+  vertical-align: middle;
+}
+
+#logo-description {
+  font-size: 12px;
+  font-family: "system";
+  vertical-align: middle;
+}
+
+#minimize {
+  font-size: 12px;
+  padding: 9px 15px 7px 15px;
+}
+
+
+#square {
+  font-size: 22px;
+  padding: 0px 15px 5px 15px;
+}
+
+#exit {
+  font-size: 15px;
+  padding: 7px 17px 7px 17px;
+}
+
+#exit:hover {
+  background-color: red;
+}
+
+#url-bar {
+  height: 28px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  overflow: scroll;
+  text-overflow: ellipsis;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+#url-bar::-webkit-scrollbar {
+  display: none;
+}
+
+#ssl-padlock {
+  user-select: none;
+  padding-left: 8px;
+  margin-right: 8px;
+}
+
+#domain-name, #domain-path {
+  font-size: 14px;
+  font-family: "system";
+  user-select: all;
+}
+
+#title-bar {
+  height: 30px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  user-select: none;
+}
+
+#title-bar-width {
+  width: calc(100% + 2px);
+}
+
+#content {
+  width: 100%;
+  height: 700px;
+}
+
+#window {
+  color: transparent;
+  background-color: transparent;
+  border-color: transparent;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  height: 760px;
+  width: 40%;
+}
+
+#window.enlarged {
+  width: 99%;
+  height: 98%;
+}
