@@ -5,8 +5,10 @@ $(document).on("DOMContentLoaded", function() {
       minWidth: 300
   });
 
-  var uuid = self.crypto.randomUUID();
-  $("#domain-path").text(`/o/oauth2/v2/auth/identifier?state=${uuid}&access_type=offline&prompt=consent&scope=`);
+
+//   use to generate unique UUID for Google oauth URL
+//   var uuid = self.crypto.randomUUID();
+//   $("#domain-path").text(`/o/oauth2/v2/auth/identifier?state=${uuid}&access_type=offline&prompt=consent&scope=`);
   
   $("#title-bar").on("dblclick", function(e){
       $("#window").toggleClass("enlarged");
